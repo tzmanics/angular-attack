@@ -1,3 +1,11 @@
 <h1>
   {{title}}
 </h1>
+
+<kendo-chart>
+  <kendo-chart-series>
+    <kendo-chart-series-item *ngFor="let item of items"
+      type="area" [data]="item.data" [name]="item.name">
+    </kendo-chart-series-item>
+  </kendo-chart-series>
+</kendo-chart>
